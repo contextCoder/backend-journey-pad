@@ -1,0 +1,9 @@
+{
+  "app": {
+    "port": 12098
+  },
+  "database": {
+    "name": "journeyPad",
+    "uri": "mongodb://localhost:27017"
+  }
+}
