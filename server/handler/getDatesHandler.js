@@ -6,7 +6,7 @@ function endpoint(req, res) {
   if (!date) {
     return res.status(400).json({ message: 'Date query parameter is required' });
   }
-  DateEvent.find({ date: new Date(date) }, (err, dateEvents) => {
+  DateEvent.find({date: req.body.date }, (err, dateEvents) => {
     if (err) {
       return res.status(500).json({ message: 'Error retrieving date events', error: err });
     }
