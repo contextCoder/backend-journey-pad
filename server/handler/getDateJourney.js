@@ -1,5 +1,5 @@
 
-const DateEvent = require('../models/DateEvent'); 
+const DateEvent = require('../models/DateEvent');
 
 async function endpoint(req, res) {
   console.log("=====req.params=====", req.query.date);
@@ -9,7 +9,7 @@ async function endpoint(req, res) {
   }
   date = new Date(date);
 
-  await DateEvent.find({date: date })
+  await DateEvent.find({ date: date })
     .then((data) => {
       console.log("=====data=====", data);
       res.status(200).json(data);

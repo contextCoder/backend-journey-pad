@@ -7,7 +7,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const routes = require('./route/routes');
-const c = require('config');
 
 app.use('/api', routes);
 
