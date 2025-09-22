@@ -1,4 +1,4 @@
-const DateEvent = require('../models/DateEvent');
+const DateColor = require('../models/DateColor');
 
 async function getAllDates(req, res) {
   try {
@@ -8,7 +8,7 @@ async function getAllDates(req, res) {
     const startDate = new Date(year, month - 1, 1); 
     const endDate = new Date(year, month, 1);
 
-    const details = await DateEvent.find({date: {$gte: startDate, $lt: endDate}});
+    const details = await DateColor.find({date: {$gte: startDate, $lt: endDate}});
     console.log("==details===",details);
     res.status(200).json(details);
   } catch (err) {

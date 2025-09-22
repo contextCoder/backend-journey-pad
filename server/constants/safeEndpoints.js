@@ -1,8 +1,8 @@
 module.exports.safeEndpoints = {
   HEALTH: '/health',
-  SAVEDATE: '/saveDate',
+  SAVEACTIVITIES: '/saveActivities',
   UPDATEDATE: '/updateDate',
-  GETDETAILS: '/getDateDetails',
+  GETDATEJOURNEY: '/getDateJourney',
   GETALLDATES: '/getAllDates',
   DATECOLOR: '/dateColor',
   DELETEALLDATES: '/deleteAllDates',

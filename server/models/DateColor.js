@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const DateColor = new Schema({
+const DateColors = new Schema({
   date: {
     type: Date,
     required: true,
@@ -12,6 +12,6 @@ const DateColor = new Schema({
   },
 });
 
-const DateEvent = mongoose.model('dateColor', DateColor);
+const DateColor = mongoose.model('dateColor', DateColors);
 
-module.exports = DateEvent;
+module.exports = DateColor;

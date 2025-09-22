@@ -6,17 +6,21 @@ const dateEventSchema = new Schema({
     type: Date,
     required: true,
   },
-  eventsDetails: {
-    type: Object,
-    default: {
-      attendees: [],
-      location: ''
-    }
+  id: {
+    type: String
   },
-  todo: {
-    type: Array,
-    default: []
-  }
+  description: {
+    type: String,
+    default: '',
+  },
+  time: {
+    type: String,
+    default: '',
+  },
+  title: {
+    type: String,
+    default: 'No Title',
+  },
 });
 
 const DateEvent = mongoose.model('DateEvent', dateEventSchema);
