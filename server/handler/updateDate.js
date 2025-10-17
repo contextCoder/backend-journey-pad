@@ -2,13 +2,15 @@
 const DateColor = require('../models/DateColor');
 
 async function endpoint(req, res) {
-  console.log("====req.body====",req.body);
+  const date = parseInt(req.body.date);
+  const month = req.body.month;
+  const year = req.body.year;
+  const color = req.body.color;
 
-  const {date, month, year, color} = req.body
 
   const newData = {
   date: date,
-  month: month,
+  month: month+1,
   year: year,
   color: color
 };
