@@ -5,4 +5,5 @@ module.exports.safeEndpoints = {
   DATECOLOR: '/dateColor',
   GETALLDATECOLORS: '/allDateColors',
   GETDATE: '/getDate',
+  MIGRATE: '/migrateData'
 };

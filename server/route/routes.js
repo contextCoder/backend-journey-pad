@@ -8,6 +8,7 @@ const getAllDates = require('../handler/getAllDates');
 const dateColorsHandler = require('../handler/dateColorsHandler');
 const saveDateColorHandler = require('../handler/saveDateColorHandler');
 const getDateEndpoint = require('../handler/getDate.js')
+const deleteDateUpdates = require('../handler/deleteDateUpdates.js');
 
 // Example route for user-related operations
 router.get(APIEndpoint.HEALTH, (req, res) => {
@@ -20,5 +21,7 @@ router.get(APIEndpoint.GETDATE, getDateEndpoint.endpoint);
 
 router.post(APIEndpoint.DATECOLOR, saveDateColorHandler.endpoint);
 router.post(APIEndpoint.UPDATEDATE, updateDate.endpoint );
+
+router.post(APIEndpoint.MIGRATE, deleteDateUpdates.endpoint );
 
 module.exports = router;
