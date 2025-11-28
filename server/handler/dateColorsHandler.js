@@ -2,7 +2,6 @@
 const DateColor = require('../models/DateColor');
 
 async function endpoint(req, res) {
-  console.log("====req.query====",req.query);
   const year = parseInt(req.query.year);
   const month = parseInt(req.query.month);
   const firstDay = new Date(year, month, 1);       // first day of month
@@ -34,9 +33,6 @@ for (let day = 1; day <= totalDays; day++) {
 for (const w of weekdays) {
   dates.push({ [w.name]: w.days });
 }
-
-console.log(dates);
-
 
   const colorDetails = await DateColor.find({ month: month+1, year: year });
   const colorMap = assignColorsToDates(dates, colorDetails)

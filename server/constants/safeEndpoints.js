@@ -4,4 +4,5 @@ module.exports.safeEndpoints = {
   GETALLDATES: '/getAllDates',
   DATECOLOR: '/dateColor',
   GETALLDATECOLORS: '/allDateColors',
+  GETDATE: '/getDate',
 };

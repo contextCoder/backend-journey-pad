@@ -8,8 +8,7 @@ async function endpoint(req, res) {
   if (!getDetails) {
     try {
       const dateColorModel = new DateColor(body)
-      const abc = await dateColorModel.save();
-      console.log("==abc", abc);
+      await dateColorModel.save();
       res.status(200).json({ message: 'Date Saved successfully' });
       return;
     } catch (err) {

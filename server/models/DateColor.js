@@ -18,6 +18,10 @@ const DateColors = new Schema({
     type: String,
     default: 'null'
   },
+  updates: {
+    type: Array,
+    default: []
+  }
 });
 
 const DateColor = mongoose.model('dateColor', DateColors);

@@ -18,10 +18,7 @@ async function endpoint(req, res) {
   { date: newData.date, month: newData.month, year: newData.year }, // match
   { $set: newData },      // update if exists
   { upsert: true, new: true } // insert if not exists, return new doc
-);
-
-console.log('resut', result)
-  
+);  
 
   res.status(200).json({message: 'working'})
 }
